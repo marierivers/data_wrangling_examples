@@ -1,4 +1,4 @@
-# data_wrangling_examples
+# Data Wrangling Examples
 Data wrangling examples with both Python and R
 
-The website was created with Quarto and shows example Python and R code for common data wrangling task.
+This website was created with Quarto and shows example Python and R code for common data wrangling task. All examples use data from the [lterdatasampler](https://lter.github.io/lterdatasampler/) package.
