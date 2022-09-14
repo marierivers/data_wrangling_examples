@@ -3,13 +3,13 @@ project:
   output-dir: docs
 
 website:
-  title: "data_wrangling_examples"
+  title: "Data Wrangling Examples"
   navbar:
     background: primary
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: "Home"
+      #- about.qmd
 
 format:
   html:
