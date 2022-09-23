@@ -2,6 +2,11 @@
 title: "Data Wrangling with R and Python"
 editor: visual
 toc-location: left
+code-tools: 
+  source: true
+  toggle: true
+  caption: view source code
+code-link: true
 ---
 
 The purpose of this document is to illustrate common data wrangling commands with R and Python. These examples use data from the [`lterdatasampler`](https://lter.github.io/lterdatasampler/index.html) package.
