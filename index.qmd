@@ -2,7 +2,6 @@
 title: "Data Wrangling with R and Python"
 editor: visual
 toc-location: left
-
 ---
 
 The purpose of this document is to illustrate common data wrangling commands with R and Python. These examples use data from the [`lterdatasampler`](https://lter.github.io/lterdatasampler/index.html) package.
@@ -579,6 +578,8 @@ trout_salamander_py.dropna(subset=['length_1_mm', 'weight_g']) \
 ## `r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` R
 
 ```{r}
+#| code-overflow: wrap
+#| column: page-right
 #| warning: false
 #| label: fig-trout_sal_size1
 #| fig-cap: "scatter plot length vs. weight visualized with ggplot"
@@ -598,6 +599,7 @@ ggplot(data = trout_salamander_R, aes(x = length_1_mm, y = weight_g)) +
 ## `r fontawesome::fa("python", fill = "#5A5A5A", a11y ="sem")` Python
 
 ```{python}
+#| code-overflow: wrap
 #| column: page-right
 #| label: fig-trout_sal_size2
 #| fig-cap: "scatter plot of length vs. weight visualized with matplotlib"
@@ -624,6 +626,7 @@ These histograms show the distribution of coastal giant salamander lenths.
 ## `r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` R
 
 ```{r}
+#| code-overflow: wrap
 #| column: page-right
 #| warning: false
 #| message: false
@@ -639,6 +642,7 @@ ggplot(data = salamander_R, aes(x = length_1_mm)) +
 ## `r fontawesome::fa("python", fill = "#5A5A5A", a11y ="sem")` Python
 
 ```{python}
+#| code-overflow: wrap
 #| column: page-right
 #| output: false
 
@@ -646,6 +650,7 @@ salamander_py = trout_salamander_py[ (trout_salamander_py['species'] == 'Coastal
 ```
 
 ```{python}
+#| code-overflow: wrap
 #| column: page-right
 #| eval: false
 
@@ -656,6 +661,7 @@ plt.show()
 ```
 
 ```{python}
+#| code-overflow: wrap
 #| column: page-right
 #| echo: false
 
@@ -674,6 +680,7 @@ These bar plots show the averge salamander weight based on site code.
 ## `r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` R
 
 ```{r}
+#| code-overflow: wrap
 #| column: page-right
 salamander_avg_weight_by_sitecode_R <- salamander_R %>% 
   group_by(sitecode) %>% 
@@ -688,6 +695,7 @@ ggplot(data = salamander_avg_weight_by_sitecode_R, aes(x = sitecode, y = mean_we
 ## `r fontawesome::fa("python", fill = "#5A5A5A", a11y ="sem")` Python
 
 ```{python}
+#| code-overflow: wrap
 #| column: page-right
 
 salamander_avg_weight_by_sitecode_py = salamander_py.groupby('sitecode')['weight_g'].mean()
@@ -707,6 +715,7 @@ These line plots show average salamander length over time.
 ## `r fontawesome::fa("r-project", fill = "#5A5A5A", a11y = "sem")` R
 
 ```{r}
+#| code-overflow: wrap
 #| column: page-right
 salamander_avg_length_by_year_R <- salamander_R %>% 
   group_by(year) %>% 
@@ -722,6 +731,7 @@ ggplot(data = salamander_avg_length_by_year_R, aes(x = year, y = mean_length)) +
 ## `r fontawesome::fa("python", fill = "#5A5A5A", a11y ="sem")` Python
 
 ```{python}
+#| code-overflow: wrap
 #| column: page-right
 salamander_avg_lenth_by_year_py = salamander_py.groupby('year')['length_1_mm'].mean()
 

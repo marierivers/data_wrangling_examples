@@ -17,6 +17,11 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    code-tools: 
+      source: true
+      toggle: true
+      caption: view source code
+    code-link: true
 
 editor: visual
 
